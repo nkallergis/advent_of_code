@@ -5,8 +5,8 @@ from dataclasses import dataclass
 def read_input(input: str) -> list:
     """Read input from file"""
     with open(input) as f:
-        movements = [line.rstrip() for line in f.readlines()]
-    return movements
+        commands = [line.rstrip() for line in f.readlines()]
+    return commands
 
 
 @dataclass
@@ -62,6 +62,6 @@ def part2(commands: list) -> int:
 
 
 if __name__ == "__main__":
-    commands = read_input("day_02/example_input.txt")
+    commands = read_input("day_02/input.txt")
     print(f"Part 1: {part1(commands)}")
     print(f"Part 2: {part2(commands)}")
