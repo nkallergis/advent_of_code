@@ -4,7 +4,7 @@ import day_03
 @pytest.fixture
 def read_example_input() -> list:
     """Read example input data"""
-    return(day_03.read_input("day_03/example_input.txt"))
+    return(day_03.read_input("example_input.txt"))
 
 def test_example(read_example_input: list) -> bool:
     """Test that input is read properly"""

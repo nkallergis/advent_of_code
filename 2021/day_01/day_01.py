@@ -37,6 +37,6 @@ def part2(measurements: list) -> int:
 
 
 if __name__ == "__main__":
-    measurements = read_input("day_01/input.txt")
+    measurements = read_input("input.txt")
     print(f"Part 1: {part1(measurements)}")
     print(f"Part 2: {part2(measurements)}")
