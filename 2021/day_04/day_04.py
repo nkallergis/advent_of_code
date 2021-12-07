@@ -15,14 +15,12 @@ def read_input(input: str) -> list:
 class Extended_board:
     values_board: list
     marked_board: list
-    transpose_board: list
 
     def mark(self, number):
         for row in range(5):
             for col in range(5):
                 if self.values_board[row][col] == number:
                     self.marked_board[row][col] = True
-                    self.transpose_board[col][row] = True
                     break
             else:
                 continue
@@ -67,7 +65,6 @@ def create_extended_boards(bingo_boards: list) -> list:
         extended_board = Extended_board(
             values_board=bingo_board,
             marked_board=[[False for i in range(5)] for j in range(5)],
-            transpose_board=[[False for i in range(5)] for j in range(5)],
         )
         extended_boards.append(extended_board)
     return extended_boards
